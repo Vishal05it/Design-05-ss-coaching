@@ -665,7 +665,28 @@
       <div class="p-6 border-t border-slate-100 bg-slate-50">
         <a
           href="#contact"
-          onclick="toggleSidebar()"
+          onclick="
+            document.querySelector('#enquiryPopup').style.display = 'flex';
+            document
+              .querySelector('#enquiryPopup')
+              .classList.remove('duration-300');
+            document
+              .querySelector('#enquiryPopup')
+              .classList.remove('opacity-0');
+            document
+              .querySelector('#enquiryPopup')
+              .classList.remove('duration-300');
+            document
+              .querySelector('#enquiryPopup')
+              .classList.remove('opacity-0');
+            document
+              .querySelector('#enquiryPopup')
+              .classList.remove('duration-300');
+            document
+              .querySelector('#enquiryPopup')
+              .classList.remove('transition-opacity');
+            document.querySelector('#enquiryPopup').classList.remove('hidden');
+          "
           class="btn-primary w-full block text-center shadow-lg"
           >Apply Now</a
         >
@@ -2383,10 +2404,12 @@
         </button>
         <div
           class="relative h-24 md:h-40 bg-indigo-600 flex items-end p-4 md:p-6"
+          style="
+            background-image: url(&quot;https://media.istockphoto.com/id/1473711199/photo/face-portrait-student-and-man-in-university-ready-for-back-to-school-learning-goals-or.jpg?s=612x612&w=0&k=20&c=Xrwp5ePvm6RjixgAjJo-OAw9oXkLt_HcmT3bdlLZUdw=&quot;);
+            background-size: cover;
+          "
         >
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
-          ></div>
+          <div class="absolute inset-0"></div>
           <div class="relative z-10 text-white">
             <h3 class="text-base md:text-2xl font-bold leading-tight">
               NIOS Admission 2026
