@@ -26,7 +26,17 @@
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-
+    <style>
+      /* Simplified floating label logic */
+      input:focus ~ label,
+      input:not(:placeholder-shown) ~ label {
+        transform: translateY(-22px) scale(0.85);
+        color: #4f46e5;
+        background: white;
+        padding: 0 4px;
+        left: 10px;
+      }
+    </style>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap");
       @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap");
@@ -35,6 +45,7 @@
           min-width: 503px;
         }
       }
+
       body {
         font-family: "Plus Jakarta Sans", sans-serif;
         scroll-behavior: smooth;
@@ -519,20 +530,20 @@
         class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center"
       >
         <a href="#home" class="flex items-center gap-3 group">
-          <img src="./assets/favicon.png" alt="" />
+          <img src="./assets/logo.png" style="height: 50px" alt="" />
           <!-- <div
             class="w-12 h-12 bg-indigo-600 rounded-xl flex items-center justify-center text-white font-bold text-2xl shadow-lg group-hover:scale-105 transition-transform"
           >
             SS
           </div> -->
-          <div class="leading-tight">
+          <!-- <div class="leading-tight">
             <h1 class="font-bold text-lg text-slate-900">SS Coaching</h1>
             <p
               class="text-[10px] font-bold text-slate-500 uppercase tracking-widest"
             >
               NIOS Expert
             </p>
-          </div>
+          </div> -->
         </a>
 
         <!-- Desktop Menu -->
@@ -662,11 +673,10 @@
     </aside>
 
     <!-- HERO SECTION -->
-    <section
+    <!-- <section
       id="home"
-      class="relative min-h-[100vh] lg:h-[115vh] lg:min-h-[650px] bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-900 overflow-hidden flex flex-col pt-4 pb-6 lg:pt-6"
+      class="relative min-h-[100vh] lg:h-auto lg:min-h-[650px] bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-900 overflow-hidden flex flex-col pt-4 pb-6 lg:pt-6"
     >
-      <!-- Background Pattern -->
       <div class="absolute inset-0 opacity-10">
         <div
           class="absolute inset-0"
@@ -684,11 +694,9 @@
       <div
         class="max-w-7xl mx-auto px-4 md:px-6 w-full relative z-10 flex flex-col gap-4 md:gap-8 flex-1"
       >
-        <!-- TOP: Full-Width Banner Slider (Placeholder) - Mobile Optimized -->
         <div
           class="w-full relative h-32 md:h-[45vh] md:min-h-[300px] md:max-h-[450px] rounded-2xl md:rounded-[2rem] overflow-hidden bg-slate-900 border border-white/10 shadow-2xl"
         >
-          <!-- Banner Slides -->
           <div
             id="hero-banner-slider"
             class="absolute inset-0 flex transition-transform duration-700 ease-in-out"
@@ -725,7 +733,6 @@
             </div>
           </div>
 
-          <!-- Dot Navigation -->
           <div
             class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-20"
           >
@@ -744,11 +751,8 @@
           </div>
         </div>
 
-        <!-- BOTTOM: Content & Form Grid -->
         <div class="grid lg:grid-cols-12 gap-8 items-end">
-          <!-- Left Side: Content & Boxes (Compact) -->
           <div class="lg:col-span-7 xl:col-span-8 flex flex-col gap-6">
-            <!-- Header Section (Compact) -->
             <div class="text-left">
               <span
                 class="inline-block px-3 py-1 rounded-full bg-indigo-500/20 border border-indigo-500/30 text-indigo-300 text-[8px] md:text-[9px] font-bold uppercase tracking-widest backdrop-blur-md mb-2 md:mb-3"
@@ -766,9 +770,7 @@
               </h2>
             </div>
 
-            <!-- Problem Boxes Grid (2x2 Compact) -->
             <div class="grid grid-cols-2 gap-3 lg:gap-4">
-              <!-- Box 1 -->
               <div
                 onclick="openEnquiryWithProblem('Failed in Board Exams')"
                 class="animate-float group cursor-pointer bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-2xl p-2.5 md:p-4 hover:bg-white/10 hover:border-indigo-500/50 transition-all duration-300"
@@ -791,7 +793,6 @@
                 </p>
               </div>
 
-              <!-- Box 2 -->
               <div
                 onclick="openEnquiryWithProblem('Dropped Out from School')"
                 class="animate-float group cursor-pointer bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-2xl p-2.5 md:p-4 hover:bg-white/10 hover:border-teal-500/50 transition-all duration-300"
@@ -814,7 +815,6 @@
                 </p>
               </div>
 
-              <!-- Box 3 -->
               <div
                 onclick="openEnquiryWithProblem('Need Fast Track Completion')"
                 class="animate-float group cursor-pointer bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-2xl p-2.5 md:p-4 hover:bg-white/10 hover:border-amber-500/50 transition-all duration-300"
@@ -837,7 +837,6 @@
                 </p>
               </div>
 
-              <!-- Box 4 -->
               <div
                 onclick="openEnquiryWithProblem('Want Fresh Start')"
                 class="animate-float group cursor-pointer bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-2xl p-2.5 md:p-4 hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300"
@@ -862,7 +861,6 @@
             </div>
           </div>
 
-          <!-- Right Side: Compact Counselling Form -->
           <div class="lg:col-span-5 xl:col-span-4 mt-4 lg:mt-0">
             <div
               class="bg-white rounded-2xl md:rounded-[2rem] p-4 md:p-5 shadow-2xl relative overflow-hidden border border-slate-100"
@@ -962,7 +960,303 @@
                   </button>
                 </form>
               </div>
-              <!-- Background Accent -->
+
+              <div
+                class="absolute -top-10 -right-10 w-24 h-24 bg-indigo-50 rounded-full blur-2xl opacity-50"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- HERO SECTION -->
+    <section
+      id="home"
+      class="relative min-h-screen lg:min-h-[700px] bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-900 overflow-hidden flex flex-col pt-20 pb-12 lg:pt-24 lg:pb-16"
+    >
+      <!-- Background Pattern -->
+      <div class="absolute inset-0 opacity-10 pointer-events-none">
+        <div
+          class="absolute inset-0"
+          style="
+            background-image: radial-gradient(
+              circle at 2px 2px,
+              white 1px,
+              transparent 0
+            );
+            background-size: 40px 40px;
+          "
+        ></div>
+      </div>
+
+      <div
+        class="max-w-7xl mx-auto px-4 md:px-6 w-full relative z-10 flex flex-col gap-6 md:gap-8 lg:gap-10"
+      >
+        <!-- TOP: Full-Width Banner Slider -->
+        <div
+          class="w-full relative h-32 sm:h-48 md:h-[35vh] lg:h-[40vh] max-h-[400px] rounded-2xl md:rounded-[2rem] overflow-hidden bg-slate-900 border border-white/10 shadow-2xl flex-shrink-0"
+        >
+          <div
+            id="hero-banner-slider"
+            class="absolute inset-0 flex transition-transform duration-700 ease-in-out"
+          >
+            <div class="w-full h-full flex-shrink-0 relative">
+              <img
+                src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=80&w=1200&auto=format&fit=crop"
+                class="w-full h-full object-cover"
+                alt="Banner 1"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-slate-950/60 to-transparent"
+              ></div>
+            </div>
+            <div class="w-full h-full flex-shrink-0 relative">
+              <img
+                src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1200&auto=format&fit=crop"
+                class="w-full h-full object-cover"
+                alt="Banner 2"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-slate-950/60 to-transparent"
+              ></div>
+            </div>
+            <div class="w-full h-full flex-shrink-0 relative">
+              <img
+                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop"
+                class="w-full h-full object-cover"
+                alt="Banner 3"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-slate-950/60 to-transparent"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Dot Navigation -->
+          <div
+            class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-20"
+          >
+            <div
+              onclick="goToBannerSlide(0)"
+              class="hero-banner-dot w-1.5 h-1.5 rounded-full bg-white/60 cursor-pointer transition-all duration-300"
+            ></div>
+            <div
+              onclick="goToBannerSlide(1)"
+              class="hero-banner-dot w-1.5 h-1.5 rounded-full bg-white/20 cursor-pointer transition-all duration-300"
+            ></div>
+            <div
+              onclick="goToBannerSlide(2)"
+              class="hero-banner-dot w-1.5 h-1.5 rounded-full bg-white/20 cursor-pointer transition-all duration-300"
+            ></div>
+          </div>
+        </div>
+
+        <!-- BOTTOM: Content & Form Grid -->
+        <div class="grid lg:grid-cols-12 gap-6 lg:gap-12 items-start">
+          <!-- Left Side: Content & Boxes -->
+          <div class="lg:col-span-7 xl:col-span-8 flex flex-col gap-6">
+            <div class="text-left">
+              <span
+                class="inline-block px-3 py-1 rounded-full bg-indigo-500/20 border border-indigo-500/30 text-indigo-300 text-[9px] md:text-[10px] font-bold uppercase tracking-widest backdrop-blur-md mb-3"
+              >
+                We Understand Your Challenges
+              </span>
+              <h2
+                class="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight text-white mb-2"
+              >
+                What's Your
+                <span
+                  class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400"
+                  >Situation</span
+                >?
+              </h2>
+            </div>
+
+            <!-- Problem Boxes Grid -->
+            <div class="grid grid-cols-2 gap-3 md:gap-4 lg:max-w-3xl">
+              <!-- Box 1 -->
+              <div
+                onclick="openEnquiryWithProblem('Failed')"
+                style="animation-delay: 1s"
+                class="animate-float cursor-pointer bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-2xl p-3 md:p-5 hover:bg-white/10 hover:border-indigo-500/50 transition-all duration-300"
+              >
+                <div
+                  class="w-8 h-8 rounded-lg bg-rose-500/20 flex items-center justify-center text-rose-400 text-sm mb-2 group-hover:bg-rose-50 group-hover:text-rose-600 transition-all"
+                >
+                  <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+                <h3
+                  class="text-xs md:text-sm font-bold text-white mb-1 group-hover:text-indigo-300 transition"
+                >
+                  Failed in 10th/12th?
+                </h3>
+                <p class="text-slate-400 text-[10px] md:text-xs leading-tight">
+                  Save your year with NIOS.
+                </p>
+              </div>
+
+              <!-- Box 2 -->
+              <div
+                onclick="openEnquiryWithProblem('Dropout')"
+                style="animation-delay: 0s"
+                class="animate-float group cursor-pointer bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-2xl p-3 md:p-5 hover:bg-white/10 hover:border-teal-500/50 transition-all duration-300"
+              >
+                <div
+                  class="w-8 h-8 rounded-lg bg-teal-500/20 flex items-center justify-center text-teal-400 text-sm mb-2 group-hover:bg-teal-50 group-hover:text-teal-600 transition-all"
+                >
+                  <i class="fa-solid fa-person-walking-arrow-right"></i>
+                </div>
+                <h3
+                  class="text-xs md:text-sm font-bold text-white mb-1 group-hover:text-teal-300 transition"
+                >
+                  School Dropout?
+                </h3>
+                <p class="text-slate-400 text-[10px] md:text-xs leading-tight">
+                  Restart your education now.
+                </p>
+              </div>
+
+              <!-- Box 3 -->
+              <div
+                onclick="openEnquiryWithProblem('FastTrack')"
+                style="animation-delay: 0.5s"
+                class="animate-float group cursor-pointer bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-2xl p-3 md:p-5 hover:bg-white/10 hover:border-amber-500/50 transition-all duration-300"
+              >
+                <div
+                  class="w-8 h-8 rounded-lg bg-amber-500/20 flex items-center justify-center text-amber-400 text-sm mb-2 group-hover:bg-amber-50 group-hover:text-amber-600 transition-all"
+                >
+                  <i class="fa-solid fa-bolt"></i>
+                </div>
+                <h3
+                  class="text-xs md:text-sm font-bold text-white mb-1 group-hover:text-amber-300 transition"
+                >
+                  Competitive Exams?
+                </h3>
+                <p class="text-slate-400 text-[10px] md:text-xs leading-tight">
+                  Complete 10th in months.
+                </p>
+              </div>
+
+              <!-- Box 4 -->
+              <div
+                onclick="openEnquiryWithProblem('FreshStart')"
+                style="animation-delay: 0.7s"
+                class="animate-float group cursor-pointer bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-2xl p-3 md:p-5 hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300"
+              >
+                <div
+                  class="w-8 h-8 rounded-lg bg-purple-500/20 flex items-center justify-center text-purple-400 text-sm mb-2 group-hover:bg-purple-50 group-hover:text-purple-600 transition-all"
+                >
+                  <i class="fa-solid fa-rocket"></i>
+                </div>
+                <h3
+                  class="text-xs md:text-sm font-bold text-white mb-1 group-hover:text-purple-300 transition"
+                >
+                  Is NIOS Valid?
+                </h3>
+                <p class="text-slate-400 text-[10px] md:text-xs leading-tight">
+                  New admission for 10/12th.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side: Compact Counselling Form -->
+          <div class="lg:col-span-5 xl:col-span-4 mt-2 lg:mt-0">
+            <div
+              class="bg-white rounded-2xl md:rounded-[2.5rem] p-5 md:p-6 shadow-2xl relative overflow-hidden border border-slate-100"
+            >
+              <div class="relative z-10">
+                <div class="flex items-center gap-4 mb-5">
+                  <div
+                    class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600"
+                  >
+                    <i class="fa-solid fa-phone-volume animate-pulse"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-bold text-slate-900 leading-tight">
+                      Free Counselling
+                    </h3>
+                    <p class="text-slate-500 text-xs tracking-tight">
+                      Expert help at your fingertips.
+                    </p>
+                  </div>
+                </div>
+
+                <form
+                  class="space-y-4"
+                  name="google-sheet"
+                  onsubmit="submitToGoogleSheet(event)"
+                >
+                  <div class="relative">
+                    <input
+                      type="text"
+                      name="name"
+                      id="heroName"
+                      placeholder=" "
+                      required
+                      class="w-full border border-slate-200 rounded-xl p-3 text-sm outline-none focus:border-indigo-600 transition bg-slate-50/50"
+                    />
+                    <label
+                      for="heroName"
+                      class="absolute left-3 top-3 text-slate-400 text-xs transition-all pointer-events-none"
+                      >*Full Name</label
+                    >
+                  </div>
+
+                  <div class="relative">
+                    <input
+                      type="tel"
+                      name="phone"
+                      id="heroPhone"
+                      placeholder=" "
+                      required
+                      class="w-full border border-slate-200 rounded-xl p-3 text-sm outline-none focus:border-indigo-600 transition bg-slate-50/50"
+                    />
+                    <label
+                      for="heroPhone"
+                      class="absolute left-3 top-3 text-slate-400 text-xs transition-all pointer-events-none"
+                      >*Phone Number</label
+                    >
+                  </div>
+
+                  <div class="grid grid-cols-2 gap-4">
+                    <div class="relative">
+                      <select
+                        name="failed_from"
+                        id="heroFailedFrom"
+                        required
+                        class="w-full border border-slate-200 rounded-xl p-3 text-sm outline-none focus:border-indigo-600 transition bg-slate-50/50 appearance-none h-11"
+                      >
+                        <option value="" disabled selected hidden>From</option>
+                        <option value="9th">9th</option>
+                        <option value="10th">10th</option>
+                        <option value="11th">11th</option>
+                        <option value="12th">12th</option>
+                      </select>
+                    </div>
+                    <div class="relative">
+                      <select
+                        name="applied_for"
+                        id="heroAppliedFor"
+                        required
+                        class="w-full border border-slate-200 rounded-xl p-3 text-sm outline-none focus:border-indigo-600 transition bg-slate-50/50 appearance-none h-11"
+                      >
+                        <option value="" disabled selected hidden>Goal</option>
+                        <option value="NIOS 10th">10th</option>
+                        <option value="NIOS 12th">12th</option>
+                        <option value="ODES">ODES</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <button
+                    type="submit"
+                    class="w-full bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl py-3.5 mt-2 font-bold shadow-xl shadow-indigo-100 transition-all active:scale-[0.98]"
+                  >
+                    Book Free Session
+                  </button>
+                </form>
+              </div>
               <div
                 class="absolute -top-10 -right-10 w-24 h-24 bg-indigo-50 rounded-full blur-2xl opacity-50"
               ></div>
@@ -971,7 +1265,6 @@
         </div>
       </div>
     </section>
-
     <!-- STATS BAR -->
     <section
       class="py-9 bg-white relative z-20 -mt-8 mx-4 md:mx-12 rounded-3xl shadow-xl border border-slate-100"
