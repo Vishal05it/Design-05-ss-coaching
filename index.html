@@ -30,6 +30,21 @@
       rel="stylesheet"
     />
     <style>
+      /* Mobile Viewport & Box Model Fixes */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+
       /* Simplified floating label logic */
       input:focus ~ label,
       input:not(:placeholder-shown) ~ label {
@@ -43,20 +58,12 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap");
       @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap");
-      @media screen and (width<=503px) {
-        body {
-          min-width: 503px;
-        }
-      }
-      @media screen and (width<=918px) {
-        body {
-          min-width: 918px;
-        }
-      }
 
       body {
         font-family: "Plus Jakarta Sans", sans-serif;
         scroll-behavior: smooth;
+        width: 100%;
+        max-width: 100%;
       }
 
       /* Container must be relative to position the label absolute */
@@ -92,9 +99,14 @@
       }
       body {
         overflow-x: hidden;
+        width: 100%;
+        max-width: 100vw;
       }
       html {
         -webkit-text-size-adjust: 100%;
+        width: 100%;
+        max-width: 100vw;
+        overflow-x: hidden;
       }
 
       /* Ensure the input padding accounts for the label space */
@@ -1691,10 +1703,10 @@
 
           <!-- Item 2 -->
           <div
-            class="bg-slate-800/50 border border-white/10 rounded-2xl md:rounded-3xl p-6 md:p-8 flex md:flex-col justify-between items-center md:items-start hover:bg-white/5 transition duration-500"
+            class="bg-slate-800/50 border border-white/10 rounded-2xl md:rounded-3xl p-6 md:p-8 flex flex-col items-center md:items-start hover:bg-white/5 transition duration-500"
           >
             <i
-              class="fa-solid fa-file-circle-check text-2xl md:text-4xl text-teal-400 mb-0 md:mb-4"
+              class="fa-solid fa-file-circle-check text-2xl md:text-4xl text-teal-400 mb-4"
             ></i>
             <div>
               <h3 class="text-xl font-bold mb-1">TMA Assistance</h3>
@@ -1707,10 +1719,10 @@
 
           <!-- Item 3 -->
           <div
-            class="bg-slate-800/50 border border-white/10 rounded-2xl md:rounded-3xl p-6 md:p-8 flex md:flex-col justify-between items-center md:items-start hover:bg-white/5 transition duration-500"
+            class="bg-slate-800/50 border border-white/10 rounded-2xl md:rounded-3xl p-6 md:p-8 flex flex-col items-center md:items-start hover:bg-white/5 transition duration-500"
           >
             <i
-              class="fa-solid fa-clipboard-list text-2xl md:text-4xl text-rose-400 mb-0 md:mb-4"
+              class="fa-solid fa-clipboard-list text-2xl md:text-4xl text-rose-400 mb-4"
             ></i>
             <div>
               <h3 class="text-xl font-bold mb-1">Mock Tests</h3>
