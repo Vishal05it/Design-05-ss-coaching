@@ -991,7 +991,7 @@
               <div class="relative z-10">
                 <div class="flex items-center gap-3 mb-4">
                   <div
-                    class="w-5 h-5 md:w-10 md:h-10 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600"
+                    class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600"
                   >
                     <i
                       class="fa-solid fa-phone-volume animate-pulse text-sm md:text-base"
@@ -1095,7 +1095,7 @@
     <!-- HERO SECTION -->
     <section
       id="home"
-      class="relative min-h-screen lg:min-h-[700px] bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-900 overflow-hidden flex flex-col pt-7 pb-12 lg:pt-7 lg:pb-16"
+      class="relative min-h-screen lg:min-h-[700px] bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-900 overflow-hidden flex flex-col pt-20 pb-12 lg:pt-24 lg:pb-16"
     >
       <!-- Background Pattern -->
       <div class="absolute inset-0 opacity-10 pointer-events-none">
@@ -1153,34 +1153,39 @@
                 class="absolute inset-0 bg-gradient-to-r from-slate-950/60 to-transparent"
               ></div>
             </div>
-
-            <div class="w-full h-full flex-shrink-0 relative">
-              <img
-                src="./4.jpg.jpeg"
-                class="block w-full h-full object-contain md:object-cover object-center"
-                alt="Banner 4"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-r from-slate-950/60 to-transparent"
-              ></div>
-            </div>
           </div>
 
           <!-- Arrow Navigation -->
           <button
             onclick="prevBannerSlide()"
-            class="absolute left-3 top-1/2 -translate-y-1/2 z-30 w-5 h-5 md:w-5 md:h-5 rounded-full bg-white/0 hover:bg-white/10 text-white flex items-center justify-center transition"
+            class="absolute left-3 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md text-white flex items-center justify-center transition"
           >
             <i class="fa-solid fa-chevron-left"></i>
           </button>
           <button
             onclick="nextBannerSlide()"
-            class="absolute right-3 top-1/2 -translate-y-1/2 z-30 w-5 h-5 md:w-5 md:h-5 rounded-full bg-white/0 hover:bg-white/10 text-white flex items-center justify-center transition"
+            class="absolute right-3 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md text-white flex items-center justify-center transition"
           >
             <i class="fa-solid fa-chevron-right"></i>
           </button>
 
-          <!-- Dot Navigation Hidden -->
+          <!-- Dot Navigation -->
+          <div
+            class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-20"
+          >
+            <div
+              onclick="goToBannerSlide(0)"
+              class="hero-banner-dot w-1.5 h-1.5 rounded-full bg-white/60 cursor-pointer transition-all duration-300"
+            ></div>
+            <div
+              onclick="goToBannerSlide(1)"
+              class="hero-banner-dot w-1.5 h-1.5 rounded-full bg-white/20 cursor-pointer transition-all duration-300"
+            ></div>
+            <div
+              onclick="goToBannerSlide(2)"
+              class="hero-banner-dot w-1.5 h-1.5 rounded-full bg-white/20 cursor-pointer transition-all duration-300"
+            ></div>
+          </div>
         </div>
 
         <!-- BOTTOM: Content & Form Grid -->
@@ -1611,17 +1616,11 @@
                   Ideal for fresh starters or students who failed in 9th/11th.
                   Start fresh and clear 10th or 12th directly.
                 </p>
-
-                <div class="mt-auto">
-                  <button
-                    onclick="
-                      document.querySelector('#enquiryPopup').style.display =
-                        'flex'
-                    "
-                    class="w-full bg-[#9333EA] hover:bg-[#9333EA] text-white py-2 px-4 rounded-xl text-xs md:text-sm font-bold transition"
-                  >
-                    Apply Now
-                  </button>
+                <div
+                  class="mt-auto text-xs md:text-sm font-bold text-slate-400 italic"
+                >
+                  Hover to translate
+                  <i class="fa-solid fa-arrow-rotate-right ml-1"></i>
                 </div>
               </div>
               <div class="flip-card-back bg-purple-600 text-white shadow-2xl">
@@ -1670,17 +1669,11 @@
                   Failed in 10th or 12th from any board? Save your year by
                   appearing for exams in the same session.
                 </p>
-
-                <div class="mt-auto">
-                  <button
-                    onclick="
-                      document.querySelector('#enquiryPopup').style.display =
-                        'flex'
-                    "
-                    class="w-full bg-[#4F46E5] hover:bg-[#4F46E5] text-white py-2 px-4 rounded-xl text-xs md:text-sm font-bold transition"
-                  >
-                    Apply Now
-                  </button>
+                <div
+                  class="mt-auto text-xs md:text-sm font-bold text-slate-400 italic"
+                >
+                  Hover to translate
+                  <i class="fa-solid fa-arrow-rotate-right ml-1"></i>
                 </div>
               </div>
               <div class="flip-card-back bg-indigo-600 text-white shadow-2xl">
@@ -1729,17 +1722,11 @@
                   Flexibility to choose exam dates. Pass Class 10th whenever you
                   are ready, year-round.
                 </p>
-
-                <div class="mt-auto">
-                  <button
-                    onclick="
-                      document.querySelector('#enquiryPopup').style.display =
-                        'flex'
-                    "
-                    class="w-full bg-[#F59E0B] hover:bg-[#F59E0B] text-white py-2 px-4 rounded-xl text-xs md:text-sm font-bold transition"
-                  >
-                    Apply Now
-                  </button>
+                <div
+                  class="mt-auto text-xs md:text-sm font-bold text-slate-400 italic"
+                >
+                  Hover to translate
+                  <i class="fa-solid fa-arrow-rotate-right ml-1"></i>
                 </div>
               </div>
               <div class="flip-card-back bg-amber-500 text-white shadow-2xl">
@@ -1794,17 +1781,11 @@
                   Clear Class 12th subjects individually at your own pace
                   through the On-Demand system.
                 </p>
-
-                <div class="mt-auto">
-                  <button
-                    onclick="
-                      document.querySelector('#enquiryPopup').style.display =
-                        'flex'
-                    "
-                    class="w-full bg-[#0D9488] hover:bg-[#0D9488] text-white py-2 px-4 rounded-xl text-xs md:text-sm font-bold transition"
-                  >
-                    Apply Now
-                  </button>
+                <div
+                  class="mt-auto text-xs md:text-sm font-bold text-slate-400 italic"
+                >
+                  Hover to translate
+                  <i class="fa-solid fa-arrow-rotate-right ml-1"></i>
                 </div>
               </div>
               <div class="flip-card-back bg-teal-600 text-white shadow-2xl">
