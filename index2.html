@@ -30,58 +30,6 @@
       rel="stylesheet"
     />
     <style>
-      .flip-card {
-        background-color: transparent;
-        perspective: 1000px;
-        height: 420px;
-        cursor: pointer;
-      }
-
-      .flip-card-inner {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        text-align: left;
-        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        transform-style: preserve-3d;
-        pointer-events: auto; /* Let events pass to the card container */
-      }
-      .flip-card:focus-within .flip-card-inner {
-        transform: rotateY(180deg);
-      }
-
-      .flip-card button {
-        cursor: pointer;
-      }
-      .flip-card:hover .flip-card-inner {
-        transform: rotateY(180deg);
-      }
-
-      .flip-card-front,
-      .flip-card-back {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        border-radius: 1.5rem;
-        padding: 1.5rem;
-        display: flex;
-        flex-direction: column;
-        pointer-events: auto; /* Re-enable for content */
-      }
-
-      .flip-card-back {
-        transform: rotateY(180deg);
-      }
-
-      /* Prevent browser from getting stuck on hover states after click */
-      .flip-card:active .flip-card-inner {
-        transform: rotateY(180deg);
-      }
-    </style>
-
-    <style>
       /* Mobile Viewport & Box Model Fixes */
       * {
         box-sizing: border-box;
@@ -574,29 +522,9 @@
           >
             <i class="fa-solid fa-phone text-indigo-500"></i> +91 98390 65533
           </a>
-          <a
-            href="tel:+919792111121"
-            class="hover:text-white transition-colors flex items-center gap-2"
-          >
-            <i class="fa-solid fa-phone text-indigo-500"></i> +91 9792111121
-          </a>
-          <a
-            href="tel:+919935035316"
-            class="hover:text-white transition-colors flex items-center gap-2"
-          >
-            <i class="fa-solid fa-phone text-indigo-500"></i> +91 9935035316
-          </a>
           <span class="w-px h-3 bg-white/10"></span>
           <span class="flex items-center gap-2">
             <i class="fa-solid fa-location-dot text-indigo-500"></i> Hazratganj,
-            Lucknow
-          </span>
-          <span class="flex items-center gap-2">
-            <i class="fa-solid fa-location-dot text-indigo-500"></i> Indira
-            Nagar, Lucknow
-          </span>
-          <span class="flex items-center gap-2">
-            <i class="fa-solid fa-location-dot text-indigo-500"></i> Alambagh,
             Lucknow
           </span>
         </div>
@@ -1126,7 +1054,7 @@
             <div class="w-full h-full flex-shrink-0 relative">
               <img
                 src="./1.jpg.jpeg"
-                class="block w-full h-full object-contain md:object-cover object-center"
+                class="block w-full h-full object-cover object-center"
                 alt="Banner 1"
               />
               <div
@@ -1136,7 +1064,7 @@
             <div class="w-full h-full flex-shrink-0 relative">
               <img
                 src="./2.jpg.jpeg"
-                class="block w-full h-full object-contain md:object-cover object-center"
+                class="block w-full h-full object-cover object-center"
                 alt="Banner 2"
               />
               <div
@@ -1146,7 +1074,7 @@
             <div class="w-full h-full flex-shrink-0 relative">
               <img
                 src="./3.jpg.jpeg"
-                class="block w-full h-full object-contain md:object-cover object-center"
+                class="block w-full h-full object-cover object-center"
                 alt="Banner 3"
               />
               <div
@@ -1154,20 +1082,6 @@
               ></div>
             </div>
           </div>
-
-          <!-- Arrow Navigation -->
-          <button
-            onclick="prevBannerSlide()"
-            class="absolute left-3 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md text-white flex items-center justify-center transition"
-          >
-            <i class="fa-solid fa-chevron-left"></i>
-          </button>
-          <button
-            onclick="nextBannerSlide()"
-            class="absolute right-3 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md text-white flex items-center justify-center transition"
-          >
-            <i class="fa-solid fa-chevron-right"></i>
-          </button>
 
           <!-- Dot Navigation -->
           <div
@@ -1213,7 +1127,7 @@
             <div class="grid grid-cols-2 gap-3 md:gap-4 lg:max-w-3xl">
               <!-- Box 1: Failed Exam -->
               <div
-                onclick="openEnquiryWithProblem('Failed in 10th/12th')"
+                onclick="openEnquiryWithProblem('Failed')"
                 style="animation-delay: 1s; position: relative"
                 class="animate-float cursor-pointer group overflow-hidden bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-2xl hover:border-rose-500/50 hover:bg-white/15 transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-rose-900/20 flex items-center"
               >
@@ -1255,7 +1169,7 @@
 
               <!-- Box 2: Dropout -->
               <div
-                onclick="openEnquiryWithProblem('School Dropout')"
+                onclick="openEnquiryWithProblem('Dropout')"
                 style="animation-delay: 0s; position: relative"
                 class="animate-float group cursor-pointer overflow-hidden bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-2xl hover:border-teal-500/50 hover:bg-white/15 transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-teal-900/20 flex items-center"
               >
@@ -1298,7 +1212,7 @@
 
               <!-- Box 3: Competitive Exams -->
               <div
-                onclick="openEnquiryWithProblem('Competitive Exams?')"
+                onclick="openEnquiryWithProblem('FastTrack')"
                 style="animation-delay: 0.5s; position: relative"
                 class="animate-float group cursor-pointer overflow-hidden bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-2xl hover:border-amber-500/50 hover:bg-white/15 transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-amber-900/20 flex items-center"
               >
@@ -1340,7 +1254,7 @@
 
               <!-- Box 4: Fresh Start -->
               <div
-                onclick="openEnquiryWithProblem('Is NIOS Valid')"
+                onclick="openEnquiryWithProblem('FreshStart')"
                 style="animation-delay: 0.7s; position: relative"
                 class="animate-float group cursor-pointer overflow-hidden bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-2xl hover:border-purple-500/50 hover:bg-white/15 transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-purple-900/20 flex items-center"
               >
@@ -1444,35 +1358,29 @@
                   <div class="grid grid-cols-2 gap-4">
                     <div class="relative">
                       <select
-                        name="your_problem"
+                        name="failed_from"
                         id="heroFailedFrom"
+                        required
                         class="w-full border border-slate-200 rounded-xl p-3 text-sm outline-none focus:border-indigo-600 transition bg-slate-50/50 appearance-none h-11"
                       >
-                        <option value="" disabled selected hidden>
-                          Your Problem?
-                        </option>
-                        <option value="Failed in 10th/12th">
-                          Failed in 10th/12th?
-                        </option>
-                        <option value="School Dropout">School Dropout?</option>
-                        <option value="Competitive Exams">
-                          Competitive Exams?
-                        </option>
-                        <option value="Is NIOS Valid">Is NIOS Valid?</option>
+                        <option value="" disabled selected hidden>From</option>
+                        <option value="9th">9th</option>
+                        <option value="10th">10th</option>
+                        <option value="11th">11th</option>
+                        <option value="12th">12th</option>
                       </select>
                     </div>
                     <div class="relative">
                       <select
                         name="applied_for"
                         id="heroAppliedFor"
+                        required
                         class="w-full border border-slate-200 rounded-xl p-3 text-sm outline-none focus:border-indigo-600 transition bg-slate-50/50 appearance-none h-11"
                       >
-                        <option value="" disabled selected hidden>
-                          Solution
-                        </option>
-                        <option value="NIOS 10th">NIOS 10th</option>
-                        <option value="NIOS 12th">NIOS 12th</option>
-                        <option value="General enquiry">General enquiry</option>
+                        <option value="" disabled selected hidden>Goal</option>
+                        <option value="NIOS 10th">10th</option>
+                        <option value="NIOS 12th">12th</option>
+                        <option value="ODES">ODES</option>
                       </select>
                     </div>
                   </div>
@@ -1568,7 +1476,6 @@
       </div>
     </section>
     <!-- STREAMS GRID -->
-    <!-- Replace your STREAMS GRID section with this updated code -->
     <section
       id="nios-admission"
       class="py-12 md:py-24 px-4 md:px-12 bg-slate-50"
@@ -1592,223 +1499,131 @@
 
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           <!-- Stream 1 -->
-          <div class="flip-card group">
-            <div class="flip-card-inner">
-              <div
-                class="flip-card-front bg-white border border-slate-100 shadow-sm"
-              >
-                <div
-                  class="w-12 h-12 md:w-14 md:h-14 bg-purple-50 rounded-xl md:rounded-2xl flex items-center justify-center text-purple-600 text-xl md:text-2xl mb-4 md:mb-6"
-                >
-                  <i class="fa-solid fa-rocket"></i>
-                </div>
-                <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-2">
-                  NIOS Stream 1
-                </h3>
-                <p
-                  class="text-xs font-bold text-purple-600 uppercase tracking-wide mb-3"
-                >
-                  New Admission
-                </p>
-                <p
-                  class="text-slate-500 text-xs md:text-sm leading-relaxed mb-6"
-                >
-                  Ideal for fresh starters or students who failed in 9th/11th.
-                  Start fresh and clear 10th or 12th directly.
-                </p>
-                <div
-                  class="mt-auto text-xs md:text-sm font-bold text-slate-400 italic"
-                >
-                  Hover to translate
-                  <i class="fa-solid fa-arrow-rotate-right ml-1"></i>
-                </div>
-              </div>
-              <div class="flip-card-back bg-purple-600 text-white shadow-2xl">
-                <h3 class="text-lg md:text-xl font-bold mb-2">NIOS Stream 1</h3>
-                <p
-                  class="text-xs font-bold text-purple-200 uppercase tracking-wide mb-3"
-                >
-                  नया प्रवेश
-                </p>
-                <p class="text-sm md:text-base leading-relaxed mb-6">
-                  नए छात्रों या 9वीं/11वीं में फेल होने वालों के लिए। नई शुरुआत
-                  करें और सीधे 10वीं या 12वीं पास करें।
-                </p>
-                <button
-                  onclick="handleCardClick(event, 'Stream 1 New Admission')"
-                  class="mt-auto w-full bg-white text-purple-600 py-3 px-4 rounded-xl text-center font-bold hover:bg-purple-50 transition-colors pointer-events-auto"
-                >
-                  अभी आवेदन करें
-                </button>
-              </div>
+          <div
+            class="bg-white p-6 md:p-8 rounded-2xl md:rounded-3xl border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2"
+          >
+            <div
+              class="w-12 h-12 md:w-14 md:h-14 bg-purple-50 rounded-xl md:rounded-2xl flex items-center justify-center text-purple-600 text-xl md:text-2xl mb-4 md:mb-6 group-hover:bg-purple-600 group-hover:text-white transition-colors"
+            >
+              <i class="fa-solid fa-rocket"></i>
             </div>
+            <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-2">
+              NIOS Stream 1
+            </h3>
+            <p
+              class="text-xs font-bold text-purple-600 uppercase tracking-wide mb-3"
+            >
+              New Admission
+            </p>
+            <p
+              class="text-slate-500 text-xs md:text-sm leading-relaxed mb-5 md:mb-6"
+            >
+              Ideal for fresh starters or students who failed in 9th/11th. Start
+              fresh and clear 10th or 12th directly.
+            </p>
+            <a
+              onclick="openEnquiryWithProblem('Stream 1 New Admission')"
+              class="inline-flex items-center gap-2 text-xs md:text-sm font-bold text-slate-900 group-hover:text-purple-600 transition"
+              style="cursor: pointer"
+            >
+              Apply Now <i class="fa-solid fa-arrow-right"></i>
+            </a>
           </div>
 
           <!-- Stream 2 -->
-          <div class="flip-card group">
-            <div class="flip-card-inner">
-              <div
-                class="flip-card-front bg-white border border-slate-100 shadow-sm"
-              >
-                <div
-                  class="w-12 h-12 md:w-14 md:h-14 bg-indigo-50 rounded-xl md:rounded-2xl flex items-center justify-center text-indigo-600 text-xl md:text-2xl mb-4 md:mb-6"
-                >
-                  <i class="fa-solid fa-rotate-left"></i>
-                </div>
-                <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-2">
-                  NIOS Stream 2
-                </h3>
-                <p
-                  class="text-xs font-bold text-indigo-600 uppercase tracking-wide mb-3"
-                >
-                  Save Year
-                </p>
-                <p
-                  class="text-slate-500 text-xs md:text-sm leading-relaxed mb-6"
-                >
-                  Failed in 10th or 12th from any board? Save your year by
-                  appearing for exams in the same session.
-                </p>
-                <div
-                  class="mt-auto text-xs md:text-sm font-bold text-slate-400 italic"
-                >
-                  Hover to translate
-                  <i class="fa-solid fa-arrow-rotate-right ml-1"></i>
-                </div>
-              </div>
-              <div class="flip-card-back bg-indigo-600 text-white shadow-2xl">
-                <h3 class="text-lg md:text-xl font-bold mb-2">NIOS Stream 2</h3>
-                <p
-                  class="text-xs font-bold text-indigo-200 uppercase tracking-wide mb-3"
-                >
-                  साल बचाएं
-                </p>
-                <p class="text-sm md:text-base leading-relaxed mb-6">
-                  किसी भी बोर्ड से 10वीं या 12वीं में फेल? उसी सत्र में परीक्षा
-                  देकर अपना कीमती साल बचाएं।
-                </p>
-                <button
-                  onclick="handleCardClick(event, 'Stream 2 Save Year')"
-                  class="mt-auto w-full bg-white text-indigo-600 py-3 px-4 rounded-xl text-center font-bold hover:bg-indigo-50 transition-colors pointer-events-auto"
-                >
-                  अभी आवेदन करें
-                </button>
-              </div>
+          <div
+            class="bg-white p-6 md:p-8 rounded-2xl md:rounded-3xl border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2"
+          >
+            <div
+              class="w-12 h-12 md:w-14 md:h-14 bg-indigo-50 rounded-xl md:rounded-2xl flex items-center justify-center text-indigo-600 text-xl md:text-2xl mb-4 md:mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors"
+            >
+              <i class="fa-solid fa-rotate-left"></i>
             </div>
+            <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-2">
+              NIOS Stream 2
+            </h3>
+            <p
+              class="text-xs font-bold text-indigo-600 uppercase tracking-wide mb-3"
+            >
+              Save Year
+            </p>
+            <p
+              class="text-slate-500 text-xs md:text-sm leading-relaxed mb-5 md:mb-6"
+            >
+              Failed in 10th or 12th from any board? Save your year by appearing
+              for exams in the same session.
+            </p>
+            <a
+              onclick="openEnquiryWithProblem('Stream 2 Save Year')"
+              class="inline-flex items-center gap-2 text-xs md:text-sm font-bold text-slate-900 group-hover:text-indigo-600 transition"
+              style="cursor: pointer"
+            >
+              Apply Now <i class="fa-solid fa-arrow-right"></i>
+            </a>
           </div>
 
           <!-- Stream 3 -->
-          <div class="flip-card group">
-            <div class="flip-card-inner">
-              <div
-                class="flip-card-front bg-white border border-slate-100 shadow-sm"
-              >
-                <div
-                  class="w-12 h-12 md:w-14 md:h-14 bg-amber-50 rounded-xl md:rounded-2xl flex items-center justify-center text-amber-600 text-xl md:text-2xl mb-4 md:mb-6"
-                >
-                  <i class="fa-solid fa-bolt"></i>
-                </div>
-                <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-2">
-                  NIOS Stream 3 (ODES)
-                </h3>
-                <p
-                  class="text-xs font-bold text-amber-600 uppercase tracking-wide mb-3"
-                >
-                  On Demand 10th
-                </p>
-                <p
-                  class="text-slate-500 text-xs md:text-sm leading-relaxed mb-6"
-                >
-                  Flexibility to choose exam dates. Pass Class 10th whenever you
-                  are ready, year-round.
-                </p>
-                <div
-                  class="mt-auto text-xs md:text-sm font-bold text-slate-400 italic"
-                >
-                  Hover to translate
-                  <i class="fa-solid fa-arrow-rotate-right ml-1"></i>
-                </div>
-              </div>
-              <div class="flip-card-back bg-amber-500 text-white shadow-2xl">
-                <h3 class="text-lg md:text-xl font-bold mb-2">
-                  NIOS Stream 3 (ODES)
-                </h3>
-                <p
-                  class="text-xs font-bold text-amber-100 uppercase tracking-wide mb-3"
-                >
-                  ऑन-डिमांड 10वीं
-                </p>
-                <p class="text-sm md:text-base leading-relaxed mb-6">
-                  परीक्षा की तारीखें खुद चुनें। जब आप तैयार हों, तभी 10वीं की
-                  परीक्षा दें और साल भर में कभी भी पास हों।
-                </p>
-                <button
-                  onclick="
-                    handleCardClick(event, 'Stream 3 ODES 10th');
-                    document.querySelector('#enquiryPopup').style.display =
-                      'flex';
-                  "
-                  class="mt-auto w-full bg-white text-amber-600 py-3 px-4 rounded-xl text-center font-bold hover:bg-amber-50 transition-colors pointer-events-auto"
-                >
-                  अभी आवेदन करें
-                </button>
-              </div>
+          <div
+            class="bg-white p-6 md:p-8 rounded-2xl md:rounded-3xl border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2"
+          >
+            <div
+              class="w-12 h-12 md:w-14 md:h-14 bg-amber-50 rounded-xl md:rounded-2xl flex items-center justify-center text-amber-600 text-xl md:text-2xl mb-4 md:mb-6 group-hover:bg-amber-500 group-hover:text-white transition-colors"
+            >
+              <i class="fa-solid fa-bolt"></i>
             </div>
+            <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-2">
+              NIOS Stream 3 (ODES)
+            </h3>
+            <p
+              class="text-xs font-bold text-amber-600 uppercase tracking-wide mb-3"
+            >
+              On Demand 10th
+            </p>
+            <p
+              class="text-slate-500 text-xs md:text-sm leading-relaxed mb-5 md:mb-6"
+            >
+              Flexibility to choose exam dates. Pass Class 10th whenever you are
+              ready, year-round.
+            </p>
+            <a
+              onclick="openEnquiryWithProblem('Stream 3 ODES 10th')"
+              class="inline-flex items-center gap-2 text-xs md:text-sm font-bold text-slate-900 group-hover:text-amber-600 transition"
+              style="cursor: pointer"
+            >
+              Apply Now <i class="fa-solid fa-arrow-right"></i>
+            </a>
           </div>
 
           <!-- Stream 4 -->
-          <div class="flip-card group">
-            <div class="flip-card-inner">
-              <div
-                class="flip-card-front bg-white border border-slate-100 shadow-sm"
-              >
-                <div
-                  class="w-12 h-12 md:w-14 md:h-14 bg-teal-50 rounded-xl md:rounded-2xl flex items-center justify-center text-teal-600 text-xl md:text-2xl mb-4 md:mb-6"
-                >
-                  <i class="fa-solid fa-clock"></i>
-                </div>
-                <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-2">
-                  NIOS Stream 4 (ODES)
-                </h3>
-                <p
-                  class="text-xs font-bold text-teal-600 uppercase tracking-wide mb-3"
-                >
-                  On Demand 12th
-                </p>
-                <p
-                  class="text-slate-500 text-xs md:text-sm leading-relaxed mb-6"
-                >
-                  Clear Class 12th subjects individually at your own pace
-                  through the On-Demand system.
-                </p>
-                <div
-                  class="mt-auto text-xs md:text-sm font-bold text-slate-400 italic"
-                >
-                  Hover to translate
-                  <i class="fa-solid fa-arrow-rotate-right ml-1"></i>
-                </div>
-              </div>
-              <div class="flip-card-back bg-teal-600 text-white shadow-2xl">
-                <h3 class="text-lg md:text-xl font-bold mb-2">
-                  NIOS Stream 4 (ODES)
-                </h3>
-                <p
-                  class="text-xs font-bold text-teal-100 uppercase tracking-wide mb-3"
-                >
-                  ऑन-डिमांड 12वीं
-                </p>
-                <p class="text-sm md:text-base leading-relaxed mb-6">
-                  अपनी गति से 12वीं के विषयों को एक-एक करके क्लियर करें।
-                  ऑन-डिमांड सिस्टम के जरिए आसानी से पास हों।
-                </p>
-                <button
-                  onclick="handleCardClick(event, 'Stream 4 ODES 12th')"
-                  class="mt-auto w-full bg-white text-teal-600 py-3 px-4 rounded-xl text-center font-bold hover:bg-teal-50 transition-colors pointer-events-auto"
-                >
-                  अभी आवेदन करें
-                </button>
-              </div>
+          <div
+            class="bg-white p-6 md:p-8 rounded-2xl md:rounded-3xl border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2"
+          >
+            <div
+              class="w-12 h-12 md:w-14 md:h-14 bg-teal-50 rounded-xl md:rounded-2xl flex items-center justify-center text-teal-600 text-xl md:text-2xl mb-4 md:mb-6 group-hover:bg-teal-600 group-hover:text-white transition-colors"
+            >
+              <i class="fa-solid fa-clock"></i>
             </div>
+            <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-2">
+              NIOS Stream 4 (ODES)
+            </h3>
+            <p
+              class="text-xs font-bold text-teal-600 uppercase tracking-wide mb-3"
+            >
+              On Demand 12th
+            </p>
+            <p
+              class="text-slate-500 text-xs md:text-sm leading-relaxed mb-5 md:mb-6"
+            >
+              Clear Class 12th subjects individually at your own pace through
+              the On-Demand system.
+            </p>
+            <a
+              onclick="openEnquiryWithProblem('Stream 4 ODES 12th')"
+              class="inline-flex items-center gap-2 text-xs md:text-sm font-bold text-slate-900 group-hover:text-teal-600 transition"
+              style="cursor: pointer"
+            >
+              Apply Now <i class="fa-solid fa-arrow-right"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -2356,7 +2171,7 @@
 
     <section
       id="locations"
-      class="py-5 md:py-12 px-4 md:px-12 bg-white relative"
+      class="py-12 md:py-24 px-4 md:px-12 bg-white relative"
     >
       <!-- Ambient Background -->
       <div
@@ -2378,7 +2193,7 @@
             <button
               onclick="switchBranch(0)"
               id="tab-0"
-              class="branch-tab px-5 md:px-8 py-2 md:py-3 rounded-full font-bold text-xs md:text-sm text-slate-500 transition-all duration-300 border border-transparent hover:border-slate-200 hover:text-slate-900 flex-shrink-0"
+              class="branch-tab tab-active px-5 md:px-8 py-2 md:py-3 rounded-full font-bold text-xs md:text-sm transition-all duration-300 border border-transparent bg-indigo-600 text-white shadow-sm flex-shrink-0"
             >
               Hazratganj
             </button>
@@ -2412,7 +2227,7 @@
     <!-- FAQ -->
     <section
       id="faq"
-      class="py-4 md:py-10 px-4 md:px-6 bg-slate-50 relative overflow-hidden"
+      class="py-12 md:py-24 px-4 md:px-6 bg-slate-50 relative overflow-hidden"
     >
       <!-- Ambient Background -->
       <div
@@ -2723,12 +2538,19 @@
         <div
           class="relative h-24 md:h-40 bg-indigo-600 flex items-end p-4 md:p-6"
           style="
-            background-image: url(./enquiryForm.jpeg);
+            background-image: url(&quot;https://media.istockphoto.com/id/1473711199/photo/face-portrait-student-and-man-in-university-ready-for-back-to-school-learning-goals-or.jpg?s=612x612&w=0&k=20&c=Xrwp5ePvm6RjixgAjJo-OAw9oXkLt_HcmT3bdlLZUdw=&quot;);
             background-size: cover;
           "
         >
           <div class="absolute inset-0"></div>
-          <div class="relative z-10 text-white"></div>
+          <div class="relative z-10 text-white">
+            <h3 class="text-base md:text-2xl font-bold leading-tight">
+              NIOS Admission 2026
+            </h3>
+            <p class="text-indigo-100 text-[9px] md:text-sm">
+              Last few seats for this session.
+            </p>
+          </div>
         </div>
         <form
           class="p-4 md:p-8 space-y-2.5 md:space-y-4"
@@ -2777,6 +2599,51 @@
     <!-- SCRIPTS -->
     <script>
       // --- GOOGLE SHEET INTEGRATION ---
+      const scriptURL = "YOUR_GOOGLE_SHEET_SCRIPT_URL_HERE"; // <--- PASTE YOUR GOOGLE APPS SCRIPT URL HERE
+
+      function submitToGoogleSheet(e) {
+        e.preventDefault();
+        const form = e.target;
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerText;
+
+        // Loading State
+        submitBtn.disabled = true;
+        submitBtn.innerHTML =
+          '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            // Success State
+            submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> Sent!';
+            submitBtn.classList.replace("btn-primary", "bg-green-600");
+            submitBtn.classList.add("text-white");
+
+            setTimeout(() => {
+              alert(
+                "Thank you! Your enquiry has been submitted successfully. We will contact you soon.",
+              );
+              form.reset();
+
+              // Reset Button
+              submitBtn.disabled = false;
+              submitBtn.innerText = originalText;
+              submitBtn.classList.replace("bg-green-600", "btn-primary");
+              submitBtn.classList.remove("bg-green-600"); // Ensure removal if btn-primary is class-based
+
+              // Close popup if it's the popup form
+              if (form.closest("#enquiryPopup")) {
+                closePopup();
+              }
+            }, 500);
+          })
+          .catch((error) => {
+            console.error("Error!", error.message);
+            alert("Error! Please try again or contact us directly.");
+            submitBtn.disabled = false;
+            submitBtn.innerText = originalText;
+          });
+      }
 
       // --- STUDENT DATA ---
       const studentsData = [
@@ -2967,51 +2834,51 @@
       renderStudents();
 
       // --- SCROLL BUTTONS ---
-      // function scrollLeftBtn() {
-      //   const container = document.getElementById("students-scroll-container");
-      //   const scrollAmount = window.innerWidth < 768 ? 260 : 320;
-      //   container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-      // }
-      // function scrollRightBtn() {
-      //   const container = document.getElementById("students-scroll-container");
-      //   const scrollAmount = window.innerWidth < 768 ? 260 : 320;
-      //   container.scrollBy({ left: scrollAmount, behavior: "smooth" });
-      // }
+      function scrollLeftBtn() {
+        const container = document.getElementById("students-scroll-container");
+        const scrollAmount = window.innerWidth < 768 ? 260 : 320;
+        container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+      }
+      function scrollRightBtn() {
+        const container = document.getElementById("students-scroll-container");
+        const scrollAmount = window.innerWidth < 768 ? 260 : 320;
+        container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      }
 
-      // // --- BANNER SLIDER LOGIC ---
-      // let currentBannerSlide = 0;
-      // const bannerSlider = document.getElementById("hero-banner-slider");
-      // const bannerDots = document.querySelectorAll(".hero-banner-dot");
+      // --- BANNER SLIDER LOGIC ---
+      let currentBannerSlide = 0;
+      const bannerSlider = document.getElementById("hero-banner-slider");
+      const bannerDots = document.querySelectorAll(".hero-banner-dot");
 
-      // function showBannerSlide(index) {
-      //   if (!bannerSlider || bannerDots.length === 0) return;
+      function showBannerSlide(index) {
+        if (!bannerSlider || bannerDots.length === 0) return;
 
-      //   // Update Slider Position
-      //   bannerSlider.style.transform = `translateX(-${index * 100}%)`;
+        // Update Slider Position
+        bannerSlider.style.transform = `translateX(-${index * 100}%)`;
 
-      //   // Update Dots
-      //   bannerDots.forEach((dot, i) => {
-      //     dot.classList.remove("bg-white/60", "w-3");
-      //     dot.classList.add("bg-white/20", "w-1.5");
-      //     if (i === index) {
-      //       dot.classList.remove("bg-white/20", "w-1.5");
-      //       dot.classList.add("bg-white/60", "w-3");
-      //     }
-      //   });
-      // }
+        // Update Dots
+        bannerDots.forEach((dot, i) => {
+          dot.classList.remove("bg-white/60", "w-3");
+          dot.classList.add("bg-white/20", "w-1.5");
+          if (i === index) {
+            dot.classList.remove("bg-white/20", "w-1.5");
+            dot.classList.add("bg-white/60", "w-3");
+          }
+        });
+      }
 
-      // function goToBannerSlide(index) {
-      //   currentBannerSlide = index;
-      //   showBannerSlide(currentBannerSlide);
-      // }
+      function goToBannerSlide(index) {
+        currentBannerSlide = index;
+        showBannerSlide(currentBannerSlide);
+      }
 
-      // function nextBannerSlide() {
-      //   if (bannerDots.length === 0) return;
-      //   currentBannerSlide = (currentBannerSlide + 1) % bannerDots.length;
-      //   showBannerSlide(currentBannerSlide);
-      // }
+      function nextBannerSlide() {
+        if (bannerDots.length === 0) return;
+        currentBannerSlide = (currentBannerSlide + 1) % bannerDots.length;
+        showBannerSlide(currentBannerSlide);
+      }
 
-      // setInterval(nextBannerSlide, 5000);
+      setInterval(nextBannerSlide, 5000);
 
       // --- FAQ TOGGLE ---
       // --- FAQ TOGGLE ---
@@ -3250,101 +3117,6 @@
       document.addEventListener("DOMContentLoaded", () => {
         switchBranch(0);
       });
-    </script>
-    <!-- Google Sheets Integration -->
-    <script>
-      const SCRIPT_URL =
-        "https://script.google.com/macros/s/AKfycbyUrST6YVgiOyWdWmOZi1BQtisjOTXpYFpMZUJGcAISaY9tsTEqY8TCPmxy3XRKnxUX/exec";
-
-      function submitToGoogleSheet(e) {
-        e.preventDefault();
-
-        const form = e.target;
-
-        // collect ALL fields automatically
-        const formData = new FormData(form);
-        const data = Object.fromEntries(formData.entries());
-
-        console.log("Sending to sheets:", data); // debug
-
-        fetch(SCRIPT_URL, {
-          method: "POST",
-          body: JSON.stringify(data),
-          headers: { "Content-Type": "application/json" },
-          mode: "no-cors",
-        })
-          .then(() => {
-            alert("Submitted ✅");
-            form.reset();
-          })
-          .catch((err) => {
-            console.error(err);
-            alert("Submission failed ❌");
-          });
-      }
-    </script>
-    <script>
-      function handleCardClick(e, problemValue) {
-        // stop hover + flip conflict
-        e.stopPropagation();
-        e.preventDefault();
-
-        console.log("Problem selected:", problemValue);
-
-        // set value in hero form dropdown (if exists)
-        const heroProblem = document.querySelector(
-          "select[name='your_problem']",
-        );
-        if (heroProblem) heroProblem.value = problemValue;
-
-        // set value in popup form (if exists)
-        const popupProblem = document.querySelector(
-          "#enquiryPopup select[name='your_problem']",
-        );
-        if (popupProblem) popupProblem.value = problemValue;
-
-        // open popup
-        const popup = document.querySelector("#enquiryPopup");
-        if (popup) {
-          popup.style.display = "flex";
-          popup.classList.remove("hidden", "opacity-0");
-        }
-      }
-    </script>
-
-    <script>
-      let currentBanner = 0;
-      const bannerSlider = document.getElementById("hero-banner-slider");
-      const bannerDots = document.querySelectorAll(".hero-banner-dot");
-
-      function updateBanner() {
-        if (!bannerSlider) return;
-        bannerSlider.style.transform = `translateX(-${currentBanner * 100}%)`;
-        bannerDots.forEach((dot, i) => {
-          dot.classList.toggle("bg-white/60", i === currentBanner);
-          dot.classList.toggle("bg-white/20", i !== currentBanner);
-        });
-      }
-
-      function goToBannerSlide(i) {
-        currentBanner = i;
-        updateBanner();
-      }
-
-      function nextBannerSlide() {
-        const total = bannerSlider.children.length;
-        currentBanner = (currentBanner + 1) % total;
-        updateBanner();
-      }
-
-      function prevBannerSlide() {
-        const total = bannerSlider.children.length;
-        currentBanner = (currentBanner - 1 + total) % total;
-        updateBanner();
-      }
-
-      // auto slide
-      setInterval(nextBannerSlide, 5000);
     </script>
   </body>
 </html>
