@@ -555,90 +555,31 @@
         }
       }
       /* Fix stream card extra whitespace on mobile */
+      /* ===== MOBILE STREAM CARD FIX (REAL SOLUTION) ===== */
       @media (max-width: 768px) {
-        .flip-card {
-          height: auto !important;
-          min-height: auto !important;
-        }
-
-        .flip-card-inner {
-          height: auto !important;
-        }
-
-        .flip-card-front,
-        .flip-card-back {
-          position: relative !important;
-          height: auto !important;
-          min-height: auto !important;
-          padding: 16px !important;
-        }
-      }
-      /* Fix large spacing between stream cards in mobile */
-      @media (max-width: 768px) {
-        /* Reduce grid gap */
+        /* Compact grid spacing */
         #nios-admission .grid {
           gap: 12px !important;
         }
 
-        /* Remove extra card spacing */
+        /* Fixed smaller height → no huge gap */
         .flip-card {
-          margin: 0 !important;
+          height: 300px !important;
         }
 
-        /* Remove extra internal space */
-        .flip-card-front,
-        .flip-card-back {
-          padding: 14px !important;
-        }
-
-        /* Ensure card fits content tightly */
-        .flip-card-inner {
-          display: block !important;
-        }
-
-        /* Remove large bottom margins inside cards */
-        .flip-card-front p,
-        .flip-card-front h3 {
-          margin-bottom: 8px !important;
-        }
-      }
-      /* FINAL FIX — remove large spacing between stream cards */
-      @media (max-width: 768px) {
-        /* Make grid compact */
-        #nios-admission .grid {
-          gap: 10px !important;
-        }
-
-        /* Remove forced height */
+        /* prevent overlap while flipping */
         .flip-card {
-          height: auto !important;
-          min-height: 0 !important;
-          display: block !important;
+          position: relative;
+          z-index: 1;
         }
 
-        /* Remove 3D stacking space */
-        .flip-card-inner {
-          position: relative !important;
-          height: auto !important;
-          transform: none !important;
+        .flip-card.active {
+          z-index: 10;
         }
 
-        /* Stack front/back normally on mobile */
-        .flip-card-front,
-        .flip-card-back {
-          position: relative !important;
-          height: auto !important;
-          padding: 16px !important;
-        }
-
-        /* Hide back side on mobile (no flip → no extra space) */
-        .flip-card-back {
-          display: none !important;
-        }
-
-        /* Remove extra internal spacing */
-        .flip-card-front p {
-          margin-bottom: 8px !important;
+        /* tap flip support */
+        .flip-card.active .flip-card-inner {
+          transform: rotateY(180deg);
         }
       }
     </style>
@@ -3480,6 +3421,22 @@
 
       // auto slide
       setInterval(nextBannerSlide, 5000);
+    </script>
+    <script>
+      document.querySelectorAll(".flip-card").forEach((card) => {
+        card.addEventListener("click", function (e) {
+          // prevent buttons from triggering flip
+          if (e.target.closest("button")) return;
+
+          // close other cards first (prevents overlap)
+          document.querySelectorAll(".flip-card").forEach((c) => {
+            if (c !== card) c.classList.remove("active");
+          });
+
+          // toggle current
+          card.classList.toggle("active");
+        });
+      });
     </script>
   </body>
 </html>
