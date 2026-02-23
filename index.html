@@ -602,6 +602,45 @@
           margin-bottom: 8px !important;
         }
       }
+      /* FINAL FIX — remove large spacing between stream cards */
+      @media (max-width: 768px) {
+        /* Make grid compact */
+        #nios-admission .grid {
+          gap: 10px !important;
+        }
+
+        /* Remove forced height */
+        .flip-card {
+          height: auto !important;
+          min-height: 0 !important;
+          display: block !important;
+        }
+
+        /* Remove 3D stacking space */
+        .flip-card-inner {
+          position: relative !important;
+          height: auto !important;
+          transform: none !important;
+        }
+
+        /* Stack front/back normally on mobile */
+        .flip-card-front,
+        .flip-card-back {
+          position: relative !important;
+          height: auto !important;
+          padding: 16px !important;
+        }
+
+        /* Hide back side on mobile (no flip → no extra space) */
+        .flip-card-back {
+          display: none !important;
+        }
+
+        /* Remove extra internal spacing */
+        .flip-card-front p {
+          margin-bottom: 8px !important;
+        }
+      }
     </style>
   </head>
 
@@ -1655,7 +1694,7 @@
           ></div>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-2">
           <!-- Stream 1 -->
           <div class="flip-card group">
             <div class="flip-card-inner">
