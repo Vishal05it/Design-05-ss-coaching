@@ -5,6 +5,20 @@
   cursor: pointer;
 }
 
+@media (max-width: 768px) {
+  .flip-card {
+    height: auto;
+    min-height: max-content;
+  }
+}
+
+@media (max-width: 640px) {
+  .flip-card {
+    height: auto;
+    min-height: max-content;
+  }
+}
+
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -12,8 +26,26 @@
   text-align: left;
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   transform-style: preserve-3d;
+  transform-origin: center center;
   pointer-events: auto; /* Let events pass to the card container */
 }
+
+@media (max-width: 768px) {
+  .flip-card-inner {
+    height: auto;
+    min-height: 100%;
+    margin: 15px 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .flip-card-inner {
+    height: auto;
+    min-height: 100%;
+    margin: 15px 0;
+  }
+}
+
 .flip-card:focus-within .flip-card-inner {
   transform: rotateY(180deg);
 }
@@ -30,6 +62,8 @@
   position: absolute;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   border-radius: 1.5rem;
@@ -37,6 +71,26 @@
   display: flex;
   flex-direction: column;
   pointer-events: auto; /* Re-enable for content */
+}
+
+@media (max-width: 768px) {
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+  }
 }
 
 .flip-card-back {
@@ -520,7 +574,14 @@ h6 {
 
   /* Fixed smaller height → no huge gap */
   .flip-card {
-    height: 300px !important;
+    height: auto;
+    min-height: 300px;
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    height: auto;
+    min-height: 300px;
   }
 
   /* prevent overlap while flipping */
