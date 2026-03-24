@@ -59,6 +59,19 @@
       opacity: 0;
     }
   }
+
+  @keyframes blink-smooth {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+  }
+
+  .animate-blink-smooth {
+    animation: blink-smooth 1.4s ease-in-out infinite;
+  }
+
+  .animate-pulse-soft {
+    animation: pulse-ring 2.5s infinite;
+  }
 </style>
   </head>
 
@@ -809,11 +822,19 @@
           <div class="rounded-lg bg-red-600 text-white text-center py-3 px-4 shadow-lg tracking-wide font-bold text-sm">NIOS Previous Year Question Papers</div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <a href="#nios-admission" class="block rounded-xl bg-red-500 text-white p-6 shadow-2xl hover:bg-red-600 transition-all duration-300">
+          <a
+            href="javascript:void(0)"
+            onclick="openEnquiryWithProblem('NIOS Stream 1 Block 2 Admission Open')"
+            class="block rounded-xl bg-red-500 text-white p-6 shadow-2xl hover:bg-red-600 transition-all duration-300 animate-blink-smooth"
+          >
             <h3 class="text-2xl md:text-3xl font-extrabold mb-2">NIOS Stream 1 Block 2 Admission Open</h3>
             <p class="text-sm md:text-base">फेल छात्रों के लिए 45 दिनों में 10वीं/12वीं पास करने का फास्ट ट्रैक रास्ता।</p>
           </a>
-          <a href="#nios-admission" class="block rounded-xl bg-red-500 text-white p-6 shadow-2xl hover:bg-red-600 transition-all duration-300">
+          <a
+            href="javascript:void(0)"
+            onclick="openEnquiryWithProblem('NIOS Stream 3 & 4 Admission Open')"
+            class="block rounded-xl bg-red-500 text-white p-6 shadow-2xl hover:bg-red-600 transition-all duration-300 animate-blink-smooth"
+          >
             <h3 class="text-2xl md:text-3xl font-extrabold mb-2">NIOS Stream 3 & 4 Admission Open</h3>
             <p class="text-sm md:text-base">ODES 10वीं और 12वीं एक्सप्रेस पैकेज - अपनी तारीख चुनें, जल्दी पास करें।</p>
           </a>
@@ -1261,20 +1282,26 @@
         >
           <!-- Item 1: Large -->
           <div
-            class="md:col-span-2 bg-gradient-to-br from-indigo-900/50 to-slate-800/50 border border-white/10 rounded-2xl md:rounded-3xl p-6 md:p-8 flex flex-col justify-end hover:bg-white/5 transition duration-500 group relative overflow-hidden min-h-[160px] md:min-h-0"
+            class="md:col-span-2 bg-gradient-to-br from-indigo-900/70 to-slate-800/70 border border-white/10 rounded-2xl md:rounded-3xl p-6 md:p-8 flex flex-col justify-end hover:bg-white/10 transition duration-500 group relative overflow-hidden min-h-[260px] md:min-h-0"
           >
-            <div
-              class="absolute top-6 right-6 p-3 bg-indigo-500 rounded-full text-white shadow-lg animate-pulse-soft"
-            >
+            <div class="absolute inset-x-0 top-0 h-28 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80"
+                alt="Expert Faculty"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-b from-slate-950/80 to-transparent"></div>
+            </div>
+            <div class="absolute top-4 right-4 p-3 bg-indigo-500 rounded-full text-white shadow-lg animate-pulse-soft">
               <i class="fa-solid fa-chalkboard-user text-xl"></i>
             </div>
-            <h3 class="text-2xl font-bold mb-2">Expert Faculty</h3>
-            <p
-              class="text-slate-400 group-hover:text-slate-200 transition-colors"
-            >
-              Our qualified teachers offer personalized, concept-driven learning
-              for consistent academic progress.
-            </p>
+            <div class="relative mt-28">
+              <h3 class="text-2xl font-bold mb-2">Expert Faculty</h3>
+              <p class="text-slate-400 group-hover:text-slate-200 transition-colors max-w-xl">
+                Our qualified teachers offer personalized, concept-driven learning
+                for consistent academic progress.
+              </p>
+            </div>
           </div>
 
           <!-- Item 2 -->
@@ -1311,20 +1338,30 @@
 
           <!-- Item 4: Large -->
           <div
-            class="md:col-span-2 bg-gradient-to-bl from-indigo-900/50 to-slate-800/50 border border-white/10 rounded-3xl p-8 flex flex-col justify-end hover:bg-white/5 transition duration-500 relative"
+            class="md:col-span-2 bg-gradient-to-bl from-indigo-900/70 to-slate-800/70 border border-white/10 rounded-3xl p-8 flex flex-col justify-end hover:bg-white/10 transition duration-500 relative overflow-hidden min-h-[260px]"
           >
+            <div class="absolute inset-x-0 top-0 h-28 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1200&q=80"
+                alt="Hybrid Learning"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-b from-slate-950/80 to-transparent"></div>
+            </div>
             <div
               class="absolute top-6 right-6 p-3 bg-sky-500 rounded-full text-white shadow-lg"
             >
               <i class="fa-solid fa-laptop-code text-xl"></i>
             </div>
-            <h3 class="text-2xl font-bold mb-2">Hybrid Learning</h3>
-            <p
-              class="text-slate-400 group-hover:text-slate-200 transition-colors"
-            >
-              Join classroom sessions or attend live online classes from
-              anywhere.
-            </p>
+            <div class="relative mt-28">
+              <h3 class="text-2xl font-bold mb-2">Hybrid Learning</h3>
+              <p
+                class="text-slate-400 group-hover:text-slate-200 transition-colors max-w-xl"
+              >
+                Join classroom sessions or attend live online classes from
+                anywhere.
+              </p>
+            </div>
           </div>
         </div>
       </div>
