@@ -59,19 +59,6 @@
       opacity: 0;
     }
   }
-
-  @keyframes blink-smooth {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.8; }
-  }
-
-  .animate-blink-smooth {
-    animation: blink-smooth 1.4s ease-in-out infinite;
-  }
-
-  .animate-pulse-soft {
-    animation: pulse-ring 2.5s infinite;
-  }
 </style>
   </head>
 
@@ -504,7 +491,7 @@
     </aside>
 
     <!-- HERO SECTION -->
-    <section
+    <!-- <section
       id="home"
       class="relative min-h-[100vh] lg:h-auto lg:min-h-[650px] bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-900 overflow-hidden flex flex-col pt-4 pb-6 lg:pt-6"
     >
@@ -582,6 +569,320 @@
           </div>
         </div>
 
+        <div class="grid lg:grid-cols-12 gap-8 items-end">
+          <div class="lg:col-span-7 xl:col-span-8 flex flex-col gap-6">
+            <div class="text-left">
+              <span
+                class="inline-block px-3 py-1 rounded-full bg-indigo-500/20 border border-indigo-500/30 text-indigo-300 text-[8px] md:text-[9px] font-bold uppercase tracking-widest backdrop-blur-md mb-2 md:mb-3"
+              >
+                We Understand Your Challenges
+              </span>
+              <h2
+                class="text-xl md:text-4xl lg:text-5xl font-bold leading-tight text-white mb-2"
+              >
+                What's Your
+                <span
+                  class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400"
+                  >Situation</span
+                >?
+              </h2>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3 lg:gap-4">
+              <div
+                onclick="openEnquiryWithProblem('Failed in Board Exams')"
+                class="animate-float group cursor-pointer bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-2xl p-2.5 md:p-4 hover:bg-white/10 hover:border-indigo-500/50 transition-all duration-300"
+                style="animation-delay: 0s"
+              >
+                <div
+                  class="w-7 h-7 md:w-8 md:h-8 rounded-lg bg-rose-500/20 flex items-center justify-center text-rose-400 text-sm md:text-base mb-1.5 md:mb-2 group-hover:bg-rose-50 group-hover:text-rose-600 transition-all"
+                >
+                  <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+                <h3
+                  class="text-[11px] md:text-[12px] font-bold text-white mb-0.5 group-hover:text-indigo-300 transition"
+                >
+                  Failed in Class 10th/12th ?
+                </h3>
+                <p
+                  class="text-slate-400 text-[9px] md:text-[10px] leading-tight"
+                >
+                  Save your year with NIOS.
+                </p>
+              </div>
+
+              <div
+                onclick="openEnquiryWithProblem('Dropped Out from School')"
+                class="animate-float group cursor-pointer bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-2xl p-2.5 md:p-4 hover:bg-white/10 hover:border-teal-500/50 transition-all duration-300"
+                style="animation-delay: 1s"
+              >
+                <div
+                  class="w-7 h-7 md:w-8 md:h-8 rounded-lg bg-teal-500/20 flex items-center justify-center text-teal-400 text-sm md:text-base mb-1.5 md:mb-2 group-hover:bg-teal-50 group-hover:text-teal-600 transition-all"
+                >
+                  <i class="fa-solid fa-person-walking-arrow-right"></i>
+                </div>
+                <h3
+                  class="text-[11px] md:text-[12px] font-bold text-white mb-0.5 group-hover:text-teal-300 transition"
+                >
+                  School Dropout ?
+                </h3>
+                <p
+                  class="text-slate-400 text-[9px] md:text-[10px] leading-tight"
+                >
+                  Restart your education now.
+                </p>
+              </div>
+
+              <div
+                onclick="openEnquiryWithProblem('Need Fast Track Completion')"
+                class="animate-float group cursor-pointer bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-2xl p-2.5 md:p-4 hover:bg-white/10 hover:border-amber-500/50 transition-all duration-300"
+                style="animation-delay: 2s"
+              >
+                <div
+                  class="w-7 h-7 md:w-8 md:h-8 rounded-lg bg-amber-500/20 flex items-center justify-center text-amber-400 text-sm md:text-base mb-1.5 md:mb-2 group-hover:bg-amber-50 group-hover:text-amber-600 transition-all"
+                >
+                  <i class="fa-solid fa-bolt"></i>
+                </div>
+                <h3
+                  class="text-[11px] md:text-[12px] font-bold text-white mb-0.5 group-hover:text-amber-300 transition"
+                >
+                  Preparing for competitive exams ?
+                </h3>
+                <p
+                  class="text-slate-400 text-[9px] md:text-[10px] leading-tight"
+                >
+                  Complete 10th in months.
+                </p>
+              </div>
+
+              <div
+                onclick="openEnquiryWithProblem('Want Fresh Start')"
+                class="animate-float group cursor-pointer bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-2xl p-2.5 md:p-4 hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300"
+                style="animation-delay: 1.5s"
+              >
+                <div
+                  class="w-7 h-7 md:w-8 md:h-8 rounded-lg bg-purple-500/20 flex items-center justify-center text-purple-400 text-sm md:text-base mb-1.5 md:mb-2 group-hover:bg-purple-50 group-hover:text-purple-600 transition-all"
+                >
+                  <i class="fa-solid fa-rocket"></i>
+                </div>
+                <h3
+                  class="text-[11px] md:text-[12px] font-bold text-white mb-0.5 group-hover:text-purple-300 transition"
+                >
+                  Is NIOS Valid board ?
+                </h3>
+                <p
+                  class="text-slate-400 text-[9px] md:text-[10px] leading-tight"
+                >
+                  New admission for 10/12th.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 xl:col-span-4 mt-4 lg:mt-0">
+            <div
+              class="bg-white rounded-2xl md:rounded-[2rem] p-4 md:p-5 shadow-2xl relative overflow-hidden border border-slate-100"
+            >
+              <div class="relative z-10">
+                <div class="flex items-center gap-3 mb-4">
+                  <div
+                    class="w-5 h-5 md:w-10 md:h-10 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600"
+                  >
+                    <i
+                      class="fa-solid fa-phone-volume animate-pulse text-sm md:text-base"
+                    ></i>
+                  </div>
+                  <div>
+                    <h3
+                      class="text-base md:text-lg font-bold text-slate-900 leading-tight"
+                    >
+                      Free Counselling for NIOS Admission
+                    </h3>
+                    <p class="text-slate-500 text-[9px] md:text-[10px]">
+                      Expert help on your fingertips.
+                    </p>
+                  </div>
+                </div>
+
+                <form
+                  class="space-y-3"
+                  name="google-sheet"
+                  onsubmit="submitToGoogleSheet(event)"
+                >
+                  <div class="form-floating-group">
+                    <input
+                      type="text"
+                      name="name"
+                      id="heroName"
+                      placeholder=" "
+                      required
+                      class="w-full border border-slate-200 rounded-lg p-2.5 text-xs outline-none focus:border-indigo-600 transition"
+                    />
+                    <label for="heroName" class="form-label text-[10px]"
+                      >*Name</label
+                    >
+                  </div>
+                  <div class="form-floating-group">
+                    <input
+                      type="tel"
+                      name="phone"
+                      id="heroPhone"
+                      placeholder=" "
+                      required
+                      class="w-full border border-slate-200 rounded-lg p-2.5 text-xs outline-none focus:border-indigo-600 transition"
+                    />
+                    <label for="heroPhone" class="form-label text-[10px]"
+                      >*Phone</label
+                    >
+                  </div>
+                  <div class="grid grid-cols-2 gap-2.5">
+                    <div class="form-floating-group">
+                      <select
+                        name="failed_from"
+                        id="heroFailedFrom"
+                        required
+                        class="w-full border border-slate-200 rounded-lg p-2.5 text-[10px] outline-none focus:border-indigo-600 transition bg-white appearance-none h-10"
+                      >
+                        <option value="" disabled selected hidden></option>
+                        <option value="9th">9th</option>
+                        <option value="10th">10th</option>
+                        <option value="11th">11th</option>
+                        <option value="12th">12th</option>
+                      </select>
+                      <label for="heroFailedFrom" class="form-label text-[10px]"
+                        >*From</label
+                      >
+                    </div>
+                    <div class="form-floating-group">
+                      <select
+                        name="applied_for"
+                        id="heroAppliedFor"
+                        required
+                        class="w-full border border-slate-200 rounded-lg p-2.5 text-[10px] outline-none focus:border-indigo-600 transition bg-white appearance-none h-10"
+                      >
+                        <option value="" disabled selected hidden></option>
+                        <option value="NIOS 10th">10th</option>
+                        <option value="NIOS 12th">12th</option>
+                        <option value="ODES">ODES</option>
+                      </select>
+                      <label for="heroAppliedFor" class="form-label text-[10px]"
+                        >*Goal</label
+                      >
+                    </div>
+                  </div>
+                  <button
+                    type="submit"
+                    class="w-full btn-primary text-xs py-2.5 mt-1 font-bold shadow-lg shadow-indigo-200"
+                  >
+                    Book Free Session
+                  </button>
+                </form>
+              </div>
+
+              <div
+                class="absolute -top-10 -right-10 w-24 h-24 bg-indigo-50 rounded-full blur-2xl opacity-50"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- HERO SECTION -->
+    <section
+      id="home"
+      class="relative min-h-screen lg:min-h-[700px] bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-900 overflow-hidden flex flex-col pt-7 pb-12 lg:pt-7 lg:pb-16"
+    >
+      <!-- Background Pattern -->
+      <div class="absolute inset-0 opacity-10 pointer-events-none">
+        <div
+          class="absolute inset-0"
+          style="
+            background-image: radial-gradient(
+              circle at 2px 2px,
+              white 1px,
+              transparent 0
+            );
+            background-size: 40px 40px;
+          "
+        ></div>
+      </div>
+
+      <div
+        class="max-w-7xl mx-auto px-4 md:px-6 w-full relative z-10 flex flex-col gap-6 md:gap-8 lg:gap-10"
+      >
+        <!-- TOP: Full-Width Banner Slider -->
+        <div
+          class="w-full relative aspect-[2392/596] md:aspect-auto md:h-[35vh] lg:h-[40vh] max-h-[400px] rounded-2xl md:rounded-[2rem] overflow-hidden bg-slate-900 border border-white/10 shadow-2xl flex-shrink-0"
+        >
+          <div
+            id="hero-banner-slider"
+            class="absolute inset-0 w-full h-full flex transition-transform duration-700 ease-in-out"
+          >
+            <div class="w-full h-full flex-shrink-0 relative">
+              <img
+                src="./5.jpg"
+                class="block w-full h-full object-cover object-center"
+                alt="Banner 1"
+                loading="lazy"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-slate-950/60 to-transparent"
+              ></div>
+            </div>
+            <div class="w-full h-full flex-shrink-0 relative">
+              <img
+                src="./6.jpg"
+                class="block w-full h-full object-cover object-center"
+                alt="Banner 2"
+                loading="lazy"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-slate-950/60 to-transparent"
+              ></div>
+            </div>
+            <div class="w-full h-full flex-shrink-0 relative">
+              <img
+                src="./7.jpg"
+                class="block w-full h-full object-cover object-center"
+                alt="Banner 3"
+                loading="lazy"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-slate-950/60 to-transparent"
+              ></div>
+            </div>
+
+            <div class="w-full h-full flex-shrink-0 relative">
+              <img
+                src="./4.jpg.jpeg"
+                class="block w-full h-full object-cover object-center"
+                alt="Banner 4"
+                loading="lazy"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-slate-950/60 to-transparent"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Arrow Navigation -->
+          <button
+            onclick="prevBannerSlide()"
+            class="absolute left-3 top-1/2 -translate-y-1/2 z-30 w-5 h-5 md:w-5 md:h-5 rounded-full bg-white/0 hover:bg-white/10 text-white flex items-center justify-center transition"
+          >
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button
+            onclick="nextBannerSlide()"
+            class="absolute right-3 top-1/2 -translate-y-1/2 z-30 w-5 h-5 md:w-5 md:h-5 rounded-full bg-white/0 hover:bg-white/10 text-white flex items-center justify-center transition"
+          >
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+
+          <!-- Dot Navigation Hidden -->
+        </div>
+
+        <!-- BOTTOM: Content & Form Grid -->
         <div class="grid lg:grid-cols-12 gap-8 items-end">
           <div class="lg:col-span-7 xl:col-span-8 flex flex-col gap-6">
             <div class="text-left">
@@ -703,107 +1004,110 @@
               </div>
             </div>
           </div>
-
-          <div class="lg:col-span-5 xl:col-span-4 mt-4 lg:mt-0">
+          <!-- Right Side: Compact Counselling Form -->
+          <div class="lg:col-span-5 xl:col-span-4 mt-2 lg:mt-0">
             <div
-              class="bg-white rounded-2xl md:rounded-[2rem] p-4 md:p-5 shadow-2xl relative overflow-hidden border border-slate-100"
+              class="bg-white rounded-2xl md:rounded-[2.5rem] p-5 md:p-6 shadow-2xl relative overflow-hidden border border-slate-100"
             >
               <div class="relative z-10">
-                <div class="flex items-center gap-3 mb-4">
+                <div class="flex items-center gap-4 mb-5">
                   <div
-                    class="w-5 h-5 md:w-10 md:h-10 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600"
+                    class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600"
                   >
-                    <i
-                      class="fa-solid fa-phone-volume animate-pulse text-sm md:text-base"
-                    ></i>
+                    <i class="fa-solid fa-phone-volume animate-pulse"></i>
                   </div>
                   <div>
-                    <h3
-                      class="text-base md:text-lg font-bold text-slate-900 leading-tight"
-                    >
+                    <h3 class="text-lg font-bold text-slate-900 leading-tight">
                       Free Counselling for NIOS Admission
                     </h3>
-                    <p class="text-slate-500 text-[9px] md:text-[10px]">
-                      Expert help on your fingertips.
+                    <p class="text-slate-500 text-xs tracking-tight">
+                      Expert help at your fingertips.
                     </p>
                   </div>
                 </div>
 
                 <form
-                  class="space-y-3"
+                  class="space-y-4"
                   name="google-sheet"
                   onsubmit="submitToGoogleSheet(event)"
                 >
-                  <div class="form-floating-group">
+                  <div class="relative">
                     <input
                       type="text"
                       name="name"
                       id="heroName"
                       placeholder=" "
                       required
-                      class="w-full border border-slate-200 rounded-lg p-2.5 text-xs outline-none focus:border-indigo-600 transition"
+                      class="w-full border border-slate-200 rounded-xl p-3 text-sm outline-none focus:border-indigo-600 transition bg-slate-50/50"
                     />
-                    <label for="heroName" class="form-label text-[10px]"
-                      >*Name</label
+                    <label
+                      for="heroName"
+                      class="absolute left-3 top-3 text-slate-400 text-xs transition-all pointer-events-none"
+                      >*Full Name</label
                     >
                   </div>
-                  <div class="form-floating-group">
+
+                  <div class="relative">
                     <input
                       type="tel"
                       name="phone"
                       id="heroPhone"
                       placeholder=" "
                       required
-                      class="w-full border border-slate-200 rounded-lg p-2.5 text-xs outline-none focus:border-indigo-600 transition"
+                      class="w-full border border-slate-200 rounded-xl p-3 text-sm outline-none focus:border-indigo-600 transition bg-slate-50/50"
                     />
-                    <label for="heroPhone" class="form-label text-[10px]"
-                      >*Phone</label
+                    <label
+                      for="heroPhone"
+                      class="absolute left-3 top-3 text-slate-400 text-xs transition-all pointer-events-none"
+                      >*Phone Number</label
                     >
                   </div>
-                  <div class="grid grid-cols-2 gap-2.5">
-                    <div class="form-floating-group">
+
+                  <div class="grid grid-cols-2 gap-4">
+                    <div class="relative">
                       <select
-                        name="failed_from"
+                        name="your_problem"
                         id="heroFailedFrom"
-                        required
-                        class="w-full border border-slate-200 rounded-lg p-2.5 text-[10px] outline-none focus:border-indigo-600 transition bg-white appearance-none h-10"
+                        class="w-full border border-slate-200 rounded-xl p-3 text-sm outline-none focus:border-indigo-600 transition bg-slate-50/50 appearance-none h-11"
                       >
-                        <option value="" disabled selected hidden></option>
-                        <option value="9th">9th</option>
-                        <option value="10th">10th</option>
-                        <option value="11th">11th</option>
-                        <option value="12th">12th</option>
+                        <option value="" disabled selected hidden>
+                          Your Problem?
+                        </option>
+                        <option value="Failed in 10th/12th">
+                          Failed in 10th/12th?
+                        </option>
+                        <option value="School Dropout">School Dropout?</option>
+                        <option value="Competitive Exams">
+                          Competitive Exams?
+                        </option>
+                        <option value="Any Other Problem?">Any Other Problem?</option>
                       </select>
-                      <label for="heroFailedFrom" class="form-label text-[10px]"
-                        >*From</label
-                      >
                     </div>
-                    <div class="form-floating-group">
+                    <div class="relative">
                       <select
                         name="applied_for"
                         id="heroAppliedFor"
-                        required
-                        class="w-full border border-slate-200 rounded-lg p-2.5 text-[10px] outline-none focus:border-indigo-600 transition bg-white appearance-none h-10"
+                        class="w-full border border-slate-200 rounded-xl p-3 text-sm outline-none focus:border-indigo-600 transition bg-slate-50/50 appearance-none h-11"
                       >
-                        <option value="" disabled selected hidden></option>
-                        <option value="NIOS 10th">10th</option>
-                        <option value="NIOS 12th">12th</option>
-                        <option value="ODES">ODES</option>
+                        <option value="" disabled selected hidden>
+                          Solution
+                        </option>
+                        <option value="Pass 10th/12th ( Same Year )">Pass 10th/12th ( Same Year )</option>
+                        <option value="9th/11th fail ? Directly pass 10th/12th">9th/11th fail ? Directly pass 10th/12th</option>
+                        <option value="Pass 10th/12th in 45 days">Pass 10th/12th in 45 days</option>
+                        <option value="General enquiry">General enquiry</option>
                       </select>
-                      <label for="heroAppliedFor" class="form-label text-[10px]"
-                        >*Goal</label
-                      >
                     </div>
                   </div>
+
                   <button
                     type="submit"
-                    class="w-full btn-primary text-xs py-2.5 mt-1 font-bold shadow-lg shadow-indigo-200"
+                    class="w-full bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl py-3.5 mt-2 font-bold shadow-xl shadow-indigo-100 transition-all active:scale-[0.98]"
                   >
                     Book Free Session
                   </button>
                 </form>
               </div>
-
               <div
                 class="absolute -top-10 -right-10 w-24 h-24 bg-indigo-50 rounded-full blur-2xl opacity-50"
               ></div>
@@ -813,35 +1117,6 @@
       </div>
     </section>
     
-    <!-- ADVERTISEMENT RED THEME SECTION -->
-    <section class="py-6 mb-10 mt-3 bg-slate-50 border-t border-b border-red-500">
-      <div class="max-w-7xl mx-auto px-4 md:px-6 space-y-4">
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-          <div class="rounded-lg bg-red-600 text-white text-center py-3 px-4 shadow-lg tracking-wide font-bold text-sm">Updated NIOS Syllabus For 10th 2025</div>
-          <div class="rounded-lg bg-red-600 text-white text-center py-3 px-4 shadow-lg tracking-wide font-bold text-sm">Updated NIOS Syllabus For 12th 2025</div>
-          <div class="rounded-lg bg-red-600 text-white text-center py-3 px-4 shadow-lg tracking-wide font-bold text-sm">NIOS Previous Year Question Papers</div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <a
-            href="javascript:void(0)"
-            onclick="openEnquiryWithProblem('NIOS Stream 1 Block 2 Admission Open')"
-            class="block rounded-xl bg-red-500 text-white p-6 shadow-2xl hover:bg-red-600 transition-all duration-300 animate-blink-smooth"
-          >
-            <h3 class="text-2xl md:text-3xl font-extrabold mb-2">NIOS Stream 1 Block 2 Admission Open</h3>
-            <p class="text-sm md:text-base">फेल छात्रों के लिए 45 दिनों में 10वीं/12वीं पास करने का फास्ट ट्रैक रास्ता।</p>
-          </a>
-          <a
-            href="javascript:void(0)"
-            onclick="openEnquiryWithProblem('NIOS Stream 3 & 4 Admission Open')"
-            class="block rounded-xl bg-red-500 text-white p-6 shadow-2xl hover:bg-red-600 transition-all duration-300 animate-blink-smooth"
-          >
-            <h3 class="text-2xl md:text-3xl font-extrabold mb-2">NIOS Stream 3 & 4 Admission Open</h3>
-            <p class="text-sm md:text-base">ODES 10वीं और 12वीं एक्सप्रेस पैकेज - अपनी तारीख चुनें, जल्दी पास करें।</p>
-          </a>
-        </div>
-      </div>
-    </section>
-
     <!-- STATS BAR -->
     <section
       class="py-9 bg-white relative z-20 -mt-8 mx-4 md:mx-12 rounded-3xl shadow-xl border border-slate-100"
@@ -917,7 +1192,33 @@
       </div>
     </section>
     <!-- STREAMS GRID -->
-    <!-- Replace your STREAMS GRID section with this updated code -->
+   <section class="py-6 mb-10 mt-3 bg-slate-50 border-t border-b border-red-500">
+      <div class="max-w-7xl mx-auto px-4 md:px-6 space-y-4">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div class="rounded-lg bg-red-600 text-white text-center py-3 px-4 shadow-lg tracking-wide font-bold text-sm">Updated NIOS Syllabus For 10th 2025</div>
+          <div class="rounded-lg bg-red-600 text-white text-center py-3 px-4 shadow-lg tracking-wide font-bold text-sm">Updated NIOS Syllabus For 12th 2025</div>
+          <div class="rounded-lg bg-red-600 text-white text-center py-3 px-4 shadow-lg tracking-wide font-bold text-sm">NIOS Previous Year Question Papers</div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <a
+            href="javascript:void(0)"
+            onclick="openEnquiryWithProblem('NIOS Stream 1 Block 2 Admission Open')"
+            class="block rounded-xl bg-red-500 text-white p-6 shadow-2xl hover:bg-red-600 transition-all duration-300 animate-blink-smooth"
+          >
+            <h3 class="text-2xl md:text-3xl font-extrabold mb-2">NIOS Stream 1 Block 2 Admission Open</h3>
+            <p class="text-sm md:text-base">फेल छात्रों के लिए 45 दिनों में 10वीं/12वीं पास करने का फास्ट ट्रैक रास्ता।</p>
+          </a>
+          <a
+            href="javascript:void(0)"
+            onclick="openEnquiryWithProblem('NIOS Stream 3 & 4 Admission Open')"
+            class="block rounded-xl bg-red-500 text-white p-6 shadow-2xl hover:bg-red-600 transition-all duration-300 animate-blink-smooth"
+          >
+            <h3 class="text-2xl md:text-3xl font-extrabold mb-2">NIOS Stream 3 & 4 Admission Open</h3>
+            <p class="text-sm md:text-base">ODES 10वीं और 12वीं एक्सप्रेस पैकेज - अपनी तारीख चुनें, जल्दी पास करें।</p>
+          </a>
+        </div>
+      </div>
+    </section>
     <section
       id="nios-admission"
       class="py-12 md:py-24 px-4 md:px-12 bg-slate-50"
@@ -1080,7 +1381,7 @@
           </div>
 
           <!-- Stream 3 -->
-          <div class="flip-card group my-5">
+          <div class="flip-card group my-5 md:my-0">
             <div class="flip-card-inner">
               <div
                 class="flip-card-front bg-white border border-slate-100 shadow-sm"
@@ -1224,9 +1525,8 @@
         </div>
       </div>
     </section>
-
     <!-- WHY US (Bento Grid) -->
-    <section
+   <section
       id="why-us"
       class="py-24 px-6 md:px-12 bg-slate-900 text-white relative overflow-hidden"
     >
