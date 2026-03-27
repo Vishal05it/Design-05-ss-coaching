@@ -79,6 +79,65 @@
 }
 </style>
 
+
+
+<style>
+@media (max-width: 768px) {
+
+  .modal-content {
+    width: 92%; /* reduced width */
+    max-width: 360px;
+    height: auto;
+    max-height: 99vh; /* increased height more */
+    overflow: hidden;
+    padding: 16px 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .modal-header {
+    margin-bottom: 10px;
+  }
+
+  .modal-logo {
+    width: 105px;
+  }
+
+  .modal-title {
+    font-size: 16px;
+    line-height: 1.35;
+    margin-top: 6px;
+  }
+
+  .modal-benefits {
+    display: none;
+  }
+
+  .modal-form {
+    margin-top: 8px;
+  }
+
+  .floating-group input {
+    height: 40px;
+    font-size: 13px;
+    padding: 12px 10px 4px;
+  }
+
+  .floating-group label {
+    font-size: 11px;
+  }
+
+  .modal-submit-btn {
+    font-size: 14px;
+    padding: 11px;
+    margin-top: 10px;
+  }
+
+}
+</style>
+
+
 </head>
 
   <body class="antialiased">
@@ -927,7 +986,7 @@
                 class="group cursor-pointer relative rounded-xl md:rounded-2xl p-3 md:p-5 bg-gradient-to-br from-rose-600 to-red-500 text-white shadow-lg shadow-rose-500/30 transition-all duration-300 hover:scale-105 hover:-translate-y-2 hover:shadow-[0_15px_40px_rgba(244,63,94,0.7)] card-shine overflow-hidden"
                 style="animation-delay: 0s; "
               >
-                <div
+                <div style="border: 2px solid red !important;"
                   class="w-7 h-7 md:w-8 md:h-8 rounded-lg bg-white/20 flex items-center justify-center text-white text-sm md:text-base mb-1.5 md:mb-2 group-hover:bg-rose-50 group-hover:text-rose-600 transition-all"
                 >
                   <i class="fa-solid fa-triangle-exclamation"></i>
@@ -935,7 +994,7 @@
                 <h3
                   class="text-[11px] md:text-[12px] font-extrabold text-white mb-0.5 group-hover:text-white transition"
                 >
-                 <b style="font-size: 18px !important;"> फेल छात्र 10वीं,12वीं</b>
+                 <b style="font-size: 18px !important; color: black;"> फेल छात्र 10वीं,12वीं</b>
                 </h3>
                 <p
                   class="text-white/90 text-[9px] md:text-[10px] leading-tight"
@@ -952,7 +1011,7 @@
                 class="group cursor-pointer relative rounded-xl md:rounded-2xl p-3 md:p-5 bg-gradient-to-br from-teal-500 to-emerald-500 text-white shadow-lg shadow-teal-500/30 transition-all duration-300 hover:scale-105 hover:-translate-y-2 hover:shadow-[0_15px_40px_rgba(20,184,166,0.7)] card-shine overflow-hidden"
                 style="animation-delay: 1s"
               >
-                <div
+                <div style="border: 2px solid darkcyan !important;"
                   class="w-7 h-7 md:w-8 md:h-8 rounded-lg bg-white/20 flex items-center justify-center text-white text-sm md:text-base mb-1.5 md:mb-2 group-hover:bg-teal-50 group-hover:text-teal-600 transition-all"
                 >
                   <i class="fa-solid fa-person-walking-arrow-right"></i>
@@ -960,7 +1019,7 @@
                 <h3
                   class="text-[11px] md:text-[12px] font-extrabold text-white mb-0.5 group-hover:text-white transition"
                 >
-                  <b style="font-size: 18px !important;">9वीं & 11वीं फेल छात्र</b>
+                  <b style="font-size: 18px !important; color: black;">9वीं & 11वीं फेल छात्र</b>
                 </h3>
                 <p
                   class="text-white/90 text-[9px] md:text-[10px] leading-tight"
@@ -977,7 +1036,7 @@
                 class="group cursor-pointer relative rounded-xl md:rounded-2xl p-3 md:p-5 bg-gradient-to-br from-amber-400 to-orange-500 text-white shadow-lg shadow-amber-500/30 transition-all duration-300 hover:scale-105 hover:-translate-y-2 hover:shadow-[0_15px_40px_rgba(245,158,11,0.7)] card-shine overflow-hidden"
                 style="animation-delay: 2s"
               >
-                <div
+                <div style="border: 2px solid orangered !important;"
                   class="w-7 h-7 md:w-8 md:h-8 rounded-lg bg-white/20 flex items-center justify-center text-white text-sm md:text-base mb-1.5 md:mb-2 group-hover:bg-amber-50 group-hover:text-amber-600 transition-all"
                 >
                   <i class="fa-solid fa-bolt"></i>
@@ -985,7 +1044,7 @@
                 <h3
                   class="text-[11px] md:text-[12px] font-extrabold text-white mb-0.5 group-hover:text-white transition"
                 >
-                 <b style="font-size: 18px !important;">साल बचाए फेल छात्र</b> 
+                 <b style="font-size: 18px !important; color: black;">साल बचाए फेल छात्र</b> 
                 </h3>
                 <p
                   class="text-white/90 text-[9px] md:text-[10px] leading-tight"
@@ -1002,15 +1061,15 @@
                 class="group cursor-pointer relative rounded-xl md:rounded-2xl p-3 md:p-5 bg-gradient-to-br from-purple-600 to-indigo-600 text-white shadow-lg shadow-purple-500/30 transition-all duration-300 hover:scale-105 hover:-translate-y-2 hover:shadow-[0_15px_40px_rgba(168,85,247,0.7)] card-shine overflow-hidden"
                 style="animation-delay: 1.5s"
               >
-                <div
+                <div style="border: 2px solid indigo !important;"
                   class="w-7 h-7 md:w-8 md:h-8 rounded-lg bg-white/20 flex items-center justify-center text-white text-sm md:text-base mb-1.5 md:mb-2 group-hover:bg-purple-50 group-hover:text-purple-600 transition-all"
                 >
-                  <i class="fa-solid fa-rocket"></i>
+                  <i  class="fa-solid fa-rocket"></i>
                 </div>
                 <h3
                   class="text-[11px] md:text-[12px] font-extrabold text-white mb-0.5 group-hover:text-white transition"
                 >
-                 <b style="font-size: 18px !important;"> क्या NIOS वैध बोर्ड है? </b>
+                 <b style="font-size: 18px !important; color: black;"> क्या NIOS वैध बोर्ड है? </b>
                 </h3>
                 <p
                   class="text-white/90 text-[9px] md:text-[10px] leading-tight"
@@ -2573,7 +2632,7 @@
               >
             </li>
             <li>
-              <a href="#faq" class="hover:text-white transition">help Center</a>
+              <a href="#faq" class="hover:text-white transition">Help Center</a>
             </li>
           </ul>
         </div>
